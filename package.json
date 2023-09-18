@@ -1,0 +1,17 @@
+{
+  "name": "news-app-react",
+  "version": "1.0.0",
+  "description": "News App created using React",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: No test case defined\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "news-app",
+    "redux",
+    "js"
+  ],
+  "author": "Himanshu Digari",
+  "license": "ISC"
+}
