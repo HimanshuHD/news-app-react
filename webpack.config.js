@@ -18,14 +18,6 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(png|jpe?g|svg|gif)?$/,
-                loader: 'file-loader',
-                options: {
-                    publicPath: 'assets/images/',
-                    outputPath: 'assets/images/',
-                },
-            },
-            {
                 test: /\.(js|jsx)$/,
                 exclude: /(node_modules)/,
                 use: {
@@ -42,6 +34,15 @@ module.exports = {
                         loader: 'css-loader'
                     }
                 ]
+            },
+            {
+                test: /\.(png|jpe?g|svg|gif)?$/,
+                type: 'asset/resource',
+                // loader: 'file-loader',
+                // options: {
+                //     publicPath: 'assets/images/',
+                //     outputPath: 'assets/images/',
+                // },
             }
         ]
     },
