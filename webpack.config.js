@@ -5,6 +5,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'build'),
         filename: 'bundle.js',
+        publicPath: '/',
     },
     resolve: {
         modules: [path.join(__dirname, 'src'), 'node_modules'],
@@ -12,10 +13,18 @@ module.exports = {
             react: path.join(__dirname, 'node_modules', 'react'),
         },
     },
-    // entry: "./src/index.js",
-    // mode: "development",
+    entry: "./src/index.js",
+    mode: "development",
     module: {
         rules: [
+            {
+                test: /\.(png|jpe?g|svg|gif)?$/,
+                loader: 'file-loader',
+                options: {
+                    publicPath: 'assets/images/',
+                    outputPath: 'assets/images/',
+                },
+            },
             {
                 test: /\.(js|jsx)$/,
                 exclude: /(node_modules)/,
